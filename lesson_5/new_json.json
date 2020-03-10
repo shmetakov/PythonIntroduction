@@ -1,0 +1,21 @@
+{"var_1": 1234, "var_2": 123.4}
+
+import json
+
+data = {
+    "var_1": 1234,
+    "var_2": 123.4
+}
+
+with open("new_json.json", "w") as f:
+    json.dump(data, f)
+
+print(type(data.get("var_1")))
+print(type(data.get("var_2")))
+
+with open("new_json.json", "r") as f:
+    data = json.load(f)
+
+print(data)
+print(type(data.get("var_1")))
+print(type(data.get("var_2")))
